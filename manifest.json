@@ -1,0 +1,12 @@
+{
+  "name": "Yes! Delete Me",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "'Yes! Delete Me' handles that agreement for you.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
