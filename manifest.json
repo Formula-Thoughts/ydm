@@ -1,12 +1,18 @@
 {
-  "name": "Yes! Delete Me",
+  "name": "S3 - Yes! Delete Me",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "'Yes! Delete Me' handles that agreement for you.",
+  "description": "'Yes! Delete Me' handles S3 bucket delete agreement for you.",
+  "author": "services+developer@formulathoughts.com",
   "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
     "128": "icon.png"
   },
-  "background": {
-    "service_worker": "background.js"
-  }
+  "content_scripts": [
+    {
+      "matches": ["https://s3.console.aws.amazon.com/*delete*"],
+      "js": ["content-script.js"]
+    }
+  ]
 }
